@@ -1,6 +1,6 @@
 # homebrew-connecto
 
-Homebrew tap for [Connecto](https://github.com/andreisuslov/ssh) - AirDrop-like SSH key pairing for your terminal.
+Homebrew tap for [Connecto](https://github.com/andreisuslov/connecto) - AirDrop-like SSH key pairing for your terminal.
 
 ## Installation
 
@@ -17,7 +17,7 @@ brew install connecto
 
 ## Usage
 
-See the [main repository](https://github.com/andreisuslov/ssh) for documentation.
+See the [main repository](https://github.com/andreisuslov/connecto) for documentation.
 
 ## Updating
 
