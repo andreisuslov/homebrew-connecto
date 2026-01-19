@@ -7,10 +7,10 @@ class Connecto < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/andreisuslov/connecto/releases/download/v0.2.0/connecto-macos-aarch64.tar.gz"
-      sha256 "a08f3ad36366b816f43232f578ec017df2a1aef60bb77fa0a4e09321db178e88"
+      sha256 "abe45edd16e8ca039b40e34ee9ad4becf54a1570de1a64a995909401317a94e5"
     else
       url "https://github.com/andreisuslov/connecto/releases/download/v0.2.0/connecto-macos-x86_64.tar.gz"
-      sha256 "e5234f6b5dd7388131cbd1a2477c44128e77e08009ee6c50919c5e0482c94f56"
+      sha256 "124591105cc5af4e7a38baff7bf7c38c0e55056ba83505fcc2d42316bdcb17d4"
     end
   end
 
