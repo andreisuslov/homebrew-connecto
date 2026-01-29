@@ -2,15 +2,15 @@ class Connecto < Formula
   desc "AirDrop-like SSH key pairing for your terminal"
   homepage "https://github.com/andreisuslov/connecto"
   license "MIT"
-  version "0.4.1"
+  version "0.4.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/andreisuslov/connecto/releases/download/v0.4.1/connecto-macos-aarch64.tar.gz"
-      sha256 "c1904c34540e20dc516116c3499b659fe529713dbf3233e5fd0619e5cb37884b"
+      url "https://github.com/andreisuslov/connecto/releases/download/v0.4.2/connecto-macos-aarch64.tar.gz"
+      sha256 "2c671509820d814a9ed6a0060e93a0597ca3171a72b1ed17d6dbe462a4191f5f"
     else
-      url "https://github.com/andreisuslov/connecto/releases/download/v0.4.1/connecto-macos-x86_64.tar.gz"
-      sha256 "2fada6dc297a558c5af3281cab2d234e101ae55c478d32c9a73c16f996da84e2"
+      url "https://github.com/andreisuslov/connecto/releases/download/v0.4.2/connecto-macos-x86_64.tar.gz"
+      sha256 "035f46064087dc555264b759c30a54b12233901a2305622137aac1e85ffa1001"
     end
   end
 
