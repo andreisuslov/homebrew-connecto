@@ -2,15 +2,15 @@ class Connecto < Formula
   desc "AirDrop-like SSH key pairing for your terminal"
   homepage "https://github.com/andreisuslov/connecto"
   license "MIT"
-  version "0.4.2"
+  version "0.5.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/andreisuslov/connecto/releases/download/v0.4.2/connecto-macos-aarch64.tar.gz"
-      sha256 "2c671509820d814a9ed6a0060e93a0597ca3171a72b1ed17d6dbe462a4191f5f"
+      url "https://github.com/andreisuslov/connecto/releases/download/v0.5.0/connecto-macos-aarch64.tar.gz"
+      sha256 "b2ae2dd08053054f0baf4d80294bc002a06c74a2a1e275e798f4b9c4e3b1bcd9"
     else
-      url "https://github.com/andreisuslov/connecto/releases/download/v0.4.2/connecto-macos-x86_64.tar.gz"
-      sha256 "035f46064087dc555264b759c30a54b12233901a2305622137aac1e85ffa1001"
+      url "https://github.com/andreisuslov/connecto/releases/download/v0.5.0/connecto-macos-x86_64.tar.gz"
+      sha256 "4f8a80ebb70a0ba0ad544a444b58e6ea5ad047d059777a55d0bb20ee6d6fb55d"
     end
   end
 
@@ -30,7 +30,10 @@ class Connecto < Formula
         sudo /usr/libexec/ApplicationFirewall/socketfilterfw --add #{bin}/connecto
         sudo /usr/libexec/ApplicationFirewall/socketfilterfw --unblockapp #{bin}/connecto
 
-      Or disable the firewall temporarily in System Settings → Privacy & Security → Firewall
+      If your router blocks device-to-device traffic, use ad-hoc mode:
+        connecto listen --adhoc
+
+      This creates a direct WiFi network that other devices can join.
     EOS
   end
 
