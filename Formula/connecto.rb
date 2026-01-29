@@ -18,6 +18,22 @@ class Connecto < Formula
     bin.install "connecto"
   end
 
+  def post_install
+    # Add firewall exception for connecto (requires admin, may prompt)
+    system "/usr/libexec/ApplicationFirewall/socketfilterfw", "--add", "#{bin}/connecto"
+    system "/usr/libexec/ApplicationFirewall/socketfilterfw", "--unblockapp", "#{bin}/connecto"
+  end
+
+  def caveats
+    <<~EOS
+      To allow incoming connections for connecto listen, you may need to run:
+        sudo /usr/libexec/ApplicationFirewall/socketfilterfw --add #{bin}/connecto
+        sudo /usr/libexec/ApplicationFirewall/socketfilterfw --unblockapp #{bin}/connecto
+
+      Or disable the firewall temporarily in System Settings → Privacy & Security → Firewall
+    EOS
+  end
+
   test do
     assert_match "connecto", shell_output("#{bin}/connecto --version")
   end
